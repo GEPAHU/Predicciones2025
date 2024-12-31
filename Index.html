@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicciones 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-gradient-to-b from-purple-100 to-pink-100 dark:from-purple-950 dark:to-pink-950 p-4">
+    <div id="app" class="flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-md bg-white rounded-lg shadow-xl p-6 dark:bg-gray-800">
+            <h1 class="text-2xl font-bold text-center mb-6 dark:text-white">¿Cómo te irá en el 2025? 🔮</h1>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2 dark:text-white">Fecha de nacimiento</label>
+                    <input 
+                        type="date" 
+                        id="birthdate"
+                        class="w-full p-2 border rounded-md dark:bg-gray-700 dark:text-white dark:border-gray-600"
+                    >
+                    <p id="error" class="text-red-500 text-sm mt-1 hidden"></p>
+                </div>
+
+                <button 
+                    id="predictButton"
+                    class="w-full bg-purple-600 text-white py-3 px-4 rounded-md hover:bg-purple-700 flex items-center justify-center gap-2"
+                >
+                    <span class="animate-spin hidden">✨</span>
+                    ¡Descubre tu fortuna para 2025!
+                </button>
+
+                <div id="prediction" class="hidden p-4 rounded-lg bg-purple-100 dark:bg-purple-900/20 text-center text-lg"></div>
+
+                <button 
+                    id="resetButton"
+                    class="w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-md hover:bg-gray-50 hidden dark:text-white dark:border-gray-600 dark:hover:bg-gray-700"
+                >
+                    Consultar para otro usuario
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
